@@ -12,3 +12,9 @@ class Estudiante:
         collection = db[self.__collection]
         collection.insert_one(self.__dict__)
         client.close()
+        
+    def Update(self):
+        client ,db = DbMongo.getDB()
+        apellido = db[self.__collection]
+        apellido.insert_one(self.__dict__)
+        client.close()
